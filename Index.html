@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganesh Puja Contribution Receipt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ganesh Puja Contribution</h1>
+        <form id="contributionForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" required>
+            </div>
+            <div class="form-group">
+                <label for="unit">Unit Number:</label>
+                <input type="text" id="unit" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount (₹):</label>
+                <input type="number" id="amount" required>
+            </div>
+            <div class="form-group">
+                <label for="paymentMode">Mode of Payment:</label>
+                <select id="paymentMode" required>
+                    <option value="Cash">Cash</option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Debit Card">Debit Card</option>
+                    <option value="UPI">UPI</option>
+                    <option value="Bank Transfer">Bank Transfer</option>
+                </select>
+            </div>
+            <button type="submit">Generate Receipt</button>
+        </form>
+    </div>
+
+    <div id="receiptModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <div id="receipt">
+                <h2>Ganesh Puja Contribution Receipt</h2>
+                <p><strong>Date:</strong> <span id="receiptDate"></span></p>
+                <p><strong>Receipt No:</strong> <span id="receiptNumber"></span></p>
+                <hr>
+                <p><strong>Name:</strong> <span id="receiptName"></span></p>
+                <p><strong>Mobile Number:</strong> <span id="receiptMobile"></span></p>
+                <p><strong>Unit Number:</strong> <span id="receiptUnit"></span></p>
+                <p><strong>Amount:</strong> ₹<span id="receiptAmount"></span></p>
+                <p><strong>Mode of Payment:</strong> <span id="receiptPaymentMode"></span></p>
+                <hr>
+                <p class="thank-you">Thank you for your generous contribution!</p>
+                <div class="signature">
+                    <p>_________________________</p>
+                    <p>Authorized Signature</p>
+                </div>
+            </div>
+            <button id="printButton">Print Receipt</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
